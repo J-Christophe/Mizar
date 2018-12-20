@@ -103,11 +103,12 @@ body {
 /*		Content box		*/
 /************************/
 .contentBox {
-    box-shadow: 0 0 6px #FF9E52, inset 0 1px 2px rgba(0, 0, 0, 0.08);
-    border: solid 1px orange;
-    border-radius: 10px;
-    background-color: black;
-    z-index: 2;
+    box-shadow: 0 0 6px #FF9E52, inset 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+    border: solid 1px orange !important;
+    border-radius: 10px !important;
+    background-color: black !important;
+    z-index: 2 !important;
+    color : #fff !important;
 }
 
 /****************************/
