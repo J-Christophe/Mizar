@@ -16,7 +16,9 @@
 #searchForm fieldset {
     position: relative;
     border: none;
-}
+    /* margin: unset !important; */
+    /* padding: unset !important; */
+} 
 
 /*** Input div style ***/
 div.searchInputDiv {
@@ -27,6 +29,7 @@ div.searchInputDiv {
     box-shadow: 0 0 6px #FF9E52, inset 0 1px 2px rgba(0, 0, 0, 0.08);
     background: #E8EDF1;
     padding-left: 30px;
+    box-sizing: initial;
 }
 
 div.searchInputDiv.focus {
@@ -41,6 +44,8 @@ div.searchInputDiv.focus {
     height: 16px;
     color: #b4bdc4;
     text-shadow: 0 1px 1px #fff;
+    /* box-sizing: initial !important;
+    font-size: small !important; */
 }
 
 #searchInput:focus {
