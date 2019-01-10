@@ -19,6 +19,7 @@
                     appendCSS: false
 				});
  */
+//folder where datacube plugin is launch
 var folderPath =  "./templates/datacube/";
 $.when(
     $.getScript( folderPath + "inline.datacube.bundle.js" ),
@@ -69,6 +70,8 @@ $.when(
             // more objects, storing the result in the first object. The first object
             // is generally empty as we don't want to alter the default options for
             // future instances of the plugin
+            
+            //folder where datacube plugin is launch
             this.folderPat =  "./templates/datacube/";
             this.settings = $.extend( {}, defaults, options );
             this._defaults = defaults;
@@ -116,8 +119,13 @@ $.when(
                         appHistogramm: this.settings.appHistogramm,
                         appDescription: this.settings.appDescription,
                         appFile: this.settings.appFile,
-                        appDataPath: this.settings.appDataPath,
+                        appDataPath: this.settings.appDataPath
                     });
+
+                if (this.settings.appendCSS == true){
+                    var style = "../templates/datacube/styles.datacube.bundle.css";
+                    $('head').append('<link rel="stylesheet" href="'+style+'" type="text/css" />');
+                }
             },
             
         });
@@ -133,10 +141,10 @@ $.when(
             } );
         };
 
-        if (this.settings.appendCSS){
-            var style = "../templates/datacube/styles.datacube.bundle.css";
-            $('head').append('<link rel="stylesheet" href="'+style+'" type="text/css" />');
-        }
+        // if (this.settings.appendCSS){
+        //     var style = "../templates/datacube/styles.datacube.bundle.css";
+        //     $('head').append('<link rel="stylesheet" href="'+style+'" type="text/css" />');
+        // }
        
 } )( jQuery, window, document );
 });
