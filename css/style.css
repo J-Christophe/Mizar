@@ -548,6 +548,7 @@ input::-moz-placeholder {
     clear: both;
 }
 
+/*fix integration datacube */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
     border: 1px solid #666 !important;
     background: #555 url(images/ui-bg_glass_20_555555_1x400.png) 50% 50% repeat-x !important;
@@ -564,4 +565,13 @@ input::-moz-placeholder {
 
 .ui-accordion .ui-accordion-header.ui-state-active {
     border-radius: inherit !important;
+}
+
+html, body {
+    line-height: unset !important;
+    font-family: unset !important;
+}
+
+button, input, optgroup, select, textarea {
+    font-size: small !important;
 }
