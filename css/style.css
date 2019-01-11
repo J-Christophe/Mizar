@@ -575,3 +575,10 @@ html, body {
 button, input, optgroup, select, textarea {
     font-size: small !important;
 }
+
+article .accordionMetaData h3.active, article .accordionMetaData h3:hover {
+    transition: all ease-out .3s;
+    background-color: rgba(102, 135, 157, 0.8);
+}
+
+    
